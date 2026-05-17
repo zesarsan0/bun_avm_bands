@@ -26,5 +26,23 @@
 <body>
     <h1>Cliente Web</h1>
 
+
+<script src="https://cdn.socket.io/4.8.3/socket.io.min.js"></script>
+  
+<script>
+  const socket = io()
+  
+  window.socket = socket
+  
+   socket.on("saludo", (payload) => {
+     console.log("Mensaje del servidor", payload);
+   })
+  
+  socket.on("chat", (message) => {
+     console.log("Mensaje del servidor", message);
+   })
+    
+</script>
+
 </body>
 </html>
